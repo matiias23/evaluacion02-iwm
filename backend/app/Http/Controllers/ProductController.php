@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return response()->json(Product::with('user')->orderBy('id', 'desc')->get());
+        return response()->json(Product::with('')->orderBy('id', 'desc')->get());
     }
 
 
